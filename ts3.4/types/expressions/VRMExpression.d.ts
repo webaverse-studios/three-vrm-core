@@ -12,7 +12,7 @@ export declare class VRMExpression extends THREE.Object3D {
      */
     weight: number;
     /**
-     * Interpret non-zero values as 1.
+     * Interpret values greater than 0.5 as 1.0, ortherwise 0.0.
      */
     isBinary: boolean;
     /**

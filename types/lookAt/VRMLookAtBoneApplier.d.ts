@@ -46,6 +46,14 @@ export declare class VRMLookAtBoneApplier implements VRMLookAtApplier {
      */
     private _restQuatRightEye;
     /**
+     * The world-space rest quaternion of the parent of the humanoid LeftEye.
+     */
+    private _restLeftEyeParentWorldQuat;
+    /**
+     * The world-space rest quaternion of the parent of the humanoid RightEye.
+     */
+    private _restRightEyeParentWorldQuat;
+    /**
      * Create a new {@link VRMLookAtBoneApplier}.
      *
      * @param humanoid A {@link VRMHumanoid}
@@ -67,9 +75,9 @@ export declare class VRMLookAtBoneApplier implements VRMLookAtApplier {
      */
     lookAt(euler: THREE.Euler): void;
     /**
-     * Get a quaternion that rotates the +Z unit vector of the humanoid Head to the {@link faceFront} direction.
+     * Get a quaternion that rotates the world-space +Z unit vector to the {@link faceFront} direction.
      *
-     * @param target A target `THREE.Vector3`
+     * @param target A target `THREE.Quaternion`
      */
-    private _getFaceFrontQuaternion;
+    private _getWorldFaceFrontQuat;
 }

@@ -67,6 +67,10 @@ export declare class VRMLookAt {
      */
     protected _needsUpdate: boolean;
     /**
+     * World rotation of the head in its rest pose.
+     */
+    private _restHeadWorldQuaternion;
+    /**
      * @deprecated Use {@link getEuler} instead.
      */
     get euler(): THREE.Euler;
@@ -109,15 +113,16 @@ export declare class VRMLookAt {
      */
     getLookAtWorldPosition(target: THREE.Vector3): THREE.Vector3;
     /**
-     * Get its LookAt orientation in world coordinate.
+     * Get its head rotation in world coordinate.
+     * Does NOT consider {@link faceFront}.
      *
-     * @param target A target `THREE.Vector3`
+     * @param target A target `THREE.Quaternion`
      */
     getLookAtWorldQuaternion(target: THREE.Quaternion): THREE.Quaternion;
     /**
      * Get a quaternion that rotates the +Z unit vector of the humanoid Head to the {@link faceFront} direction.
      *
-     * @param target A target `THREE.Vector3`
+     * @param target A target `THREE.Quaternion`
      */
     getFaceFrontQuaternion(target: THREE.Quaternion): THREE.Quaternion;
     /**

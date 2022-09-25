@@ -6,4 +6,3 @@ export { VRMLookAtExpressionApplier } from './VRMLookAtExpressionApplier';
 export { VRMLookAtLoaderPlugin } from './VRMLookAtLoaderPlugin';
 export { VRMLookAtRangeMap } from './VRMLookAtRangeMap';
 export { VRMLookAtTypeName } from './VRMLookAtTypeName';
-export { VRMCurveMapper } from './VRMCurveMapper';
